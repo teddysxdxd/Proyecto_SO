@@ -4,8 +4,22 @@
  */
 package com.mycompany.proyectofinalsistemasoperativos;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.JWindow;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 
 /**
  * Splash Screen con fondo degradado, estrellas y barra de carga animada.
@@ -16,7 +30,7 @@ public class SplashScreen extends JWindow {
     private float alpha = 1f;
 
     public SplashScreen() {
-        setSize(600, 400);
+        setSize(600, 450); // Aumentamos la altura para dar más espacio vertical
         setLocationRelativeTo(null);
 
         // Panel principal con fondo degradado + estrellas
@@ -50,27 +64,31 @@ public class SplashScreen extends JWindow {
 
         // Títulos
         JLabel titulo = new JLabel("PROYECTO FINAL", SwingConstants.CENTER);
-        titulo.setFont(new Font("Segoe UI", Font.BOLD, 26));
+        titulo.setFont(new Font("Segoe UI", Font.BOLD, 23));
         titulo.setForeground(Color.WHITE);
 
         JLabel subtitulo = new JLabel("Simulador de Gestión de Memoria", SwingConstants.CENTER);
         subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 18));
         subtitulo.setForeground(Color.LIGHT_GRAY);
 
-        JLabel universidad = new JLabel("Centro Universitario Boca del Monte", SwingConstants.CENTER);
+        // ** CAMBIO 1: Texto de la universidad actualizado para coincidir con la imagen **
+        JLabel universidad = new JLabel("Centro Universitario Boca del Monte | Ingeniería en Sistemas de la Información", SwingConstants.CENTER);
         universidad.setFont(new Font("Segoe UI", Font.ITALIC, 14));
         universidad.setForeground(new Color(200, 200, 200));
 
-        // Nombres del equipo
+        // Nombres del equipo - Se revisa el HTML para asegurar los saltos de línea
         JLabel integrantes = new JLabel("<html><div style='text-align:center;'>"
-                + "Fidian Bianchi Morales Pastran 7690-22-22593<br>"
-                + "Javier Sandoval 7690-23-5643<br>"
-                + "Tedy Adolfo Castellanos 7690-23-3016"
-                + "</div></html>", SwingConstants.CENTER);
+            + "Fidian Bianchi Morales Pastran 7690-22-22593<br>" 
+            + "Javier Sandoval 7690-23-5643<br>" 
+            + "Tedi Adolfo Castellanos 7690-23-3016<br>" 
+            + "Erwin Alberto Ramirez Baluk 7690-23-2387<br>"
+            + "</div></html>", SwingConstants.CENTER);
+
         integrantes.setForeground(new Color(176, 176, 176));
         integrantes.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 
-        JPanel textoPanel = new JPanel(new GridLayout(5, 1));
+        // ** CAMBIO 2: GridLayout ajustado a 4 filas para las 4 etiquetas **
+        JPanel textoPanel = new JPanel(new GridLayout(4, 1));
         textoPanel.setOpaque(false);
         textoPanel.add(titulo);
         textoPanel.add(subtitulo);
@@ -120,4 +138,3 @@ public class SplashScreen extends JWindow {
         }).start();
     }
 }
-

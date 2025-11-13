@@ -1,10 +1,34 @@
 package com.mycompany.proyectofinalsistemasoperativos;
 
-import javax.swing.*;
-import java.awt.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.Insets;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 
 public class InterfazSimulador extends JFrame {
 
@@ -55,19 +79,20 @@ public class InterfazSimulador extends JFrame {
 
             // --- TEXTOS ---
             JLabel titulo = new JLabel("PROYECTO FINAL - SISTEMAS OPERATIVOS I", SwingConstants.CENTER);
-            titulo.setFont(new Font("Segoe UI", Font.BOLD, 22));
+            titulo.setFont(new Font("Segoe UI", Font.BOLD, 20));
             titulo.setForeground(Color.WHITE);
 
             JLabel subtitulo = new JLabel("Centro Universitario Boca del Monte | Ingeniería en Sistemas de la Información", SwingConstants.CENTER);
-            subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+            subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 12));
             subtitulo.setForeground(new Color(210, 210, 210));
 
             JLabel integrantes = new JLabel("<html><div style='text-align:center;'>"
                     + "<span style='color:#E0E0E0;'>Fidian Bianchi Morales Pastran 7690-22-22593</span><br>"
-                    + "<span style='color:#D0D0D0;'>Javier Sandoval 7690-23-5643</span><br>"
-                    + "<span style='color:#D0D0D0;'>Tedy Adolfo Castellanos 7690-23-3016</span><br>"
+                    + "<span style='color:#D0D0D0;'>Javier Isaac Sandoval Perez 7690-23-5643</span><br>"
+                    + "<span style='color:#D0D0D0;'>Tedi Adolfo Castellanos 7690-23-3016</span><br>"
+                    + "<span style='color:#D0D0D0;'>Erwin Alberto Ramirez Baluk 7690-23-2387</span><br>"
                     + "</div></html>", SwingConstants.CENTER);
-            integrantes.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+            integrantes.setFont(new Font("Segoe UI", Font.PLAIN, 10));
 
             // --- PANEL CENTRAL DE TEXTOS ---
             JPanel infoPanel = new JPanel(new GridLayout(3, 1, 2, 5));

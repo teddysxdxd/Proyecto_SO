@@ -79,9 +79,9 @@ public class SplashScreen extends JWindow {
         // Nombres del equipo - Se revisa el HTML para asegurar los saltos de línea
         JLabel integrantes = new JLabel("<html><div style='text-align:center;'>"
             + "Fidian Bianchi Morales Pastran 7690-22-22593<br>" 
-            + "Javier Sandoval 7690-23-5643<br>" 
+            + "Javier Isaac Sandoval Perez 7690-23-5643<br>" 
             + "Tedi Adolfo Castellanos 7690-23-3016<br>" 
-            + "Erwin Alberto Ramirez Baluk 7690-23-2387<br>"
+            + "ahor<br>"
             + "</div></html>", SwingConstants.CENTER);
 
         integrantes.setForeground(new Color(176, 176, 176));

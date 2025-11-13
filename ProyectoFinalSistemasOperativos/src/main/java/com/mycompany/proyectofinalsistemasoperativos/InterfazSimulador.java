@@ -68,7 +68,7 @@ public class InterfazSimulador extends JFrame {
                     g2d.fillRect(0, 0, getWidth(), getHeight());
                 }
             };
-            header.setPreferredSize(new Dimension(getWidth(), 180)); // AUMENTAMOS altura
+            header.setPreferredSize(new Dimension(getWidth(), 220)); // AUMENTAMOS altura
             header.setBorder(BorderFactory.createEmptyBorder(15, 20, 15, 20));
             header.setLayout(new BorderLayout());
 
